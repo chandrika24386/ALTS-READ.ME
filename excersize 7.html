@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>JavaScript Arrays</title>
+</head>
+<body>
+<script>
+    // Creating array strcture with single variable
+     var colors = ["Red", "Green", "Blue"]; 
+    // Printing variable values
+    document.write(colors);
+    document.write("<br>");
+    //Accessing the Elements of an Array
+    document.write(colors[0]);// First element
+    document.write("<br>");
+    document.write(colors[1]);// Second element
+    document.write("<br>");
+    document.write(colors[2]);// Third element
+    document.write("<br>");
+    //Getting the Length of an Array
+    document.write(colors.length); // 0utputs: 3
+    document.write("<br>");
+     // Iterates or looping over array elements
+     //Syntax for loop: Initialization, conditions, increment
+    for(var i = 0; i < colors.length; i++){    
+        document.write(colors[i] + "<br>"); // Print array element
+    }
+    // for-of loop Iterates over array elements in ES6 Features
+    for(var color of colors){    
+        document.write(color + "<br>"); // Print array element
+    }
+    //Adding New Elements to an Array
+    colors.push("Yellow");// add the value to end of the array
+    document.write(colors);
+    document.write("<br>");
+    colors.unshift("White"); //Add the value to beginning of the array
+    document.write(colors);
+    document.write("<br>");
+	//"Red", "Green", "Blue"
+	//push 
+	//"Red", "Green", "Blue","Yellow"
+	//unshift
+	//"white","Red", "Green", "Blue","yellow"
+    //Removing Elements from an Array
+    var last = colors.pop();
+    document.write(last + "<br>"); // Prints: yellow
+    document.write(colors.length); // Prints: 4
+    document.write(colors);
+    document.write("<br>");
+    var first = colors.shift();
+    document.write(first + "<br>"); // Prints: white
+    document.write(colors.length); // Prints: 3
+     document.write(colors);
+    document.write("<br>");
+    //join() method.
+    document.write(colors.join() + "<br>"); // Prints: Red,Green,Blue
+    document.write(colors.join("") + "<br>"); // Prints: RedGreenBlue
+    document.write(colors.join("-") + "<br>"); // Prints: Red-Green-Blue
+    document.write(colors.join(", ")); // Prints: Red, Green, Blue
+ document.write(colors.join("#")); // Prints: Red#Green#Blue
+   </script>
+</body>
+</html>
